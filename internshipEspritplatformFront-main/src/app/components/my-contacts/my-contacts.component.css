@@ -1,0 +1,158 @@
+/* Style général de la carte */
+.cardWithShadow {
+  border-radius: 12px; /* Bordures plus arrondies */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre plus douce */
+  background-color: #fff; /* Fond blanc */
+  overflow: hidden; /* Pour gérer les débordements */
+  margin: 16px; /* Espacement autour de la carte */
+}
+
+/* Style de l'en-tête de la carte */
+.cardWithShadow header {
+  background-color: #ff0000; /* Fond rouge pour l'en-tête */
+  padding: 20px; /* Espacement interne augmenté */
+  color: white; /* Texte en blanc */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Bordure légère sous l'en-tête */
+}
+
+.cardWithShadow header h3 {
+  margin: 0; /* Suppression des marges */
+  font-size: 20px; /* Taille du titre légèrement augmentée */
+  font-weight: bold; /* Gras */
+}
+
+.cardWithShadow header p {
+  margin-top: 8px; /* Espacement entre le titre et le sous-titre */
+  font-size: 14px; /* Taille du sous-titre légèrement augmentée */
+}
+
+/* Style de la boîte de messages */
+.msg-box {
+  padding: 16px; /* Espacement interne augmenté */
+}
+
+/* Style des éléments de message */
+.msg-item {
+  padding: 16px; /* Espacement interne augmenté */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Ligne de séparation entre les messages */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Animation douce */
+  overflow: hidden;
+}
+
+.msg-item:hover {
+  background-color: #f9f9f9; /* Changer la couleur de fond au survol */
+  cursor: pointer; /* Changer le curseur pour indiquer l'interactivité */
+}
+
+/* Style des images des utilisateurs */
+/* Style des images rondes */
+.rounded-circle {
+  border-radius: 50%;
+  border: 2px solid #f0f0f0;
+  object-fit: cover; /* Pour s'assurer que l'image remplit bien le cercle */
+  width: 48px;
+  height: 48px;
+  background-color: #f5f5f5; /* Fond si l'image ne charge pas */
+}
+
+/* Style du titre de chaque message */
+.f-s-14 {
+  font-size: 14px; /* Taille de police légèrement augmentée */
+}
+
+.f-w-600 {
+  font-weight: 600; /* Poids de la police */
+}
+
+.m-0 {
+  margin: 0; /* Suppression des marges par défaut */
+}
+
+/* Style des sous-titres de chaque message */
+.f-s-12 {
+  font-size: 12px; /* Taille du texte */
+  color: #555; /* Couleur de texte plus sombre pour le sous-titre */
+}
+
+/* Espacement entre les éléments */
+.m-l-12 {
+  margin-left: 16px; /* Espacement à gauche légèrement augmenté */
+}
+
+/* Option responsive */
+@media (max-width: 768px) {
+  .cardWithShadow {
+    margin: 12px; /* Espacement réduit sur les petits écrans */
+  }
+
+  .cardWithShadow header h3 {
+    font-size: 18px; /* Taille de titre plus petite sur mobile */
+  }
+
+  .cardWithShadow header p {
+    font-size: 12px; /* Taille de sous-titre plus petite sur mobile */
+  }
+}
+/* Loading State */
+.loading-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #666;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #ff0000;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.error-message {
+  padding: 20px;
+  background: #ffeeee;
+  color: #d32f2f;
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.retry-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.retry-button:hover {
+  background: #d32f2f;
+}
+
+/* No Followers Message */
+.no-followers {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+/* Empêche le débordement pendant les animations */
+.row {
+  min-height: 300px; /* Ajustez selon vos besoins */
+  overflow: hidden;
+}
